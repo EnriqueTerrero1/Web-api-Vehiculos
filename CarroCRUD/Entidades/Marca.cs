@@ -6,7 +6,8 @@ namespace CarroCRUD.Entidades
     {
         public int Id { get;set;}
 
-        [Required]
+        [Required(ErrorMessage = "Este campo es requerido")]
+
         public string Name { get; set; }
 
         public List<Carro> carros { get; set; }

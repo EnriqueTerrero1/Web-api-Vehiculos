@@ -47,12 +47,12 @@ namespace CarroCRUD.Controllers
         public async Task<ActionResult> Put(int id, [FromBody] CarroCreacionDTO carroCreacionDTO)
         {
 
-            var carro =  context.carros.FirstOrDefault(x => x.Id == id);
+            var carro = await context.carros.FirstOrDefaultAsync(x => x.Id == id);
 
             if (carro != null)
             {
                 carro = mapper.Map(carroCreacionDTO, carro);
-                await context.SaveChangesAsync();
+                context.SaveChanges();
             }
 
             

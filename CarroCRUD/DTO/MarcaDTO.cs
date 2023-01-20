@@ -7,7 +7,7 @@ namespace CarroCRUD.DTO
 
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Este campo es requerido")]
         public string Name { get; set; }
     }
 }

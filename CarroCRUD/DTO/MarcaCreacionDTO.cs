@@ -4,7 +4,7 @@ namespace CarroCRUD.DTO
 {
     public class MarcaCreacionDTO
     {
-        [Required]
+        [Required(ErrorMessage = "Este campo es requerido")]
         public string Name { get; set; }
     }
 }
